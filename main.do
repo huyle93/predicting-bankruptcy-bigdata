@@ -1,4 +1,5 @@
 // Huy Le
+cd "C:\Users\vc2000\Documents\My STATA\assignment"
 clear
 use "bankrupt.dta"
 *create the variables
@@ -38,5 +39,5 @@ sort year
 by year: egen m = mean(z)
 
 *graph
-graph twoway line year m, name(zscore_by_year, replace) scale(1.3) title("Mean zscore by year graph") note("this graph use 2 variables m and year, sorted by year") aspectratio(0.5)
+graph twoway line m year, name(zscore_by_year, replace) scale(1.3) title("Mean zscore by year graph") note("this graph use 2 variables m and year, sorted by year") aspectratio(0.5)
 
